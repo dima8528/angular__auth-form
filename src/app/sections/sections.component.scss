@@ -1,0 +1,23 @@
+.sections {
+  display: flex;
+  gap: 10px;
+}
+
+.section {
+  height: 8px;
+  border-radius: 3px;
+  background-color: #ccc;
+  flex: 1;
+}
+
+.is-red {
+  background-color: red;
+}
+
+.is-yellow {
+  background-color: yellow;
+}
+
+.is-green {
+  background-color: lightgreen;
+}

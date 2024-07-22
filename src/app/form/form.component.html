@@ -1,0 +1,33 @@
+<form action="" class="form" [formGroup]="userForm">
+  <div class="form__element">
+    <label for="emailTitle">Login *</label>
+
+    <input
+      type="email"
+      name="email"
+      id="emailTitle"
+      class="form__input-field"
+      placeholder="username@example.com"
+      formControlName="email"
+    >
+  </div>
+
+  <div class="form__element">
+    <label for="passwordTitle">Password *</label>
+
+    <input
+      type="password"
+      name="password"
+      id="passwordTitle"
+      class="form__input-field"
+      placeholder="********"
+      formControlName="password"
+    >
+  </div>
+
+  <div class="form__sections">
+    <form-sections [form]="userForm"></form-sections>
+  </div>
+
+  <button type="submit" class="form__submit">Register</button>
+</form>

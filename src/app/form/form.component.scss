@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  // padding: 20px;
+  // width: 480px;
+
+  // &__title {
+  //   width: 100%;
+  // }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__input-field {
+    height: 40px;
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    line-height: 17px;
+    font-size: 15px;
+  }
+
+  &__submit {
+    height: 45px;
+    line-height: 17px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: rgb(255, 124, 124);
+    color: white;
+  }
+
+  &__sections {
+    margin: 16px 0 8px;
+  }
+}
+
+label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+app-form {
+  width: 100%;
+  padding: 20px;
+}
