@@ -12,7 +12,7 @@ import { analyzePassword } from "../../utils/analyzePassword";
 export class FormSections {
   @Input() form!: FormGroup;
 
-  firstSectionClasses(): any {
+  firstSectionClasses(): object {
     if (!this.form) {
       return {};
     }

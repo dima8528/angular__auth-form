@@ -10,4 +10,4 @@ import { NgModule } from "@angular/core";
   exports: [FormSections]
 })
 
-export class FormModule{}
+export class SectionsModule{}

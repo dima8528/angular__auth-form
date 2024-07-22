@@ -1,8 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core'
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-// import { FormSections } from '../sections/sections.component';
-import { FormModule } from '../sections/sections.module';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
