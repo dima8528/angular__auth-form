@@ -17,14 +17,22 @@
   <div class="form__element">
     <label for="passwordTitle">Password *</label>
 
-    <input
-      type="password"
-      name="password"
-      id="passwordTitle"
-      class="form__input-field"
-      placeholder="********"
-      formControlName="password"
-    >
+    <div class="form__input">
+      <input
+        type="{{ passwordType }}"
+        name="password"
+        id="passwordTitle"
+        class="form__input-field"
+        placeholder="********"
+        formControlName="password"
+      >
+
+      <div class="password-icon" (click)="togglePasswordVisibility()">
+        <img src="svg/lock.svg" alt="Lock icon" *ngIf="!isPasswordVisible">
+
+        <img src="svg/unlock.svg" alt="Unlock icon" *ngIf="isPasswordVisible">
+      </div>
+    </div>
   </div>
 
   <div class="form__sections">

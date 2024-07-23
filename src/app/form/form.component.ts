@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, ElementRef, ViewChild } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 export class AppForm {
   public userForm: FormGroup;
+  isPasswordVisible = false;
 
   constructor() {
     this.userForm = new FormGroup({
@@ -18,11 +19,19 @@ export class AppForm {
     })
   }
 
+  togglePasswordVisibility = () => {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
   get isEmailEmpty(): boolean {
     return !this.userForm.get('email')?.value;
   }
 
   get isPasswordEmpty(): boolean {
     return !this.userForm.get('password')?.value;
+  }
+
+  get passwordType(): string {
+    return this.isPasswordVisible ? 'text' : 'password';
   }
 }
