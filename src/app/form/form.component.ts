@@ -17,4 +17,12 @@ export class AppForm {
       password: new FormControl('', [Validators.required, Validators.minLength(8)])
     })
   }
+
+  get isEmailEmpty(): boolean {
+    return !this.userForm.get('email')?.value;
+  }
+
+  get isPasswordEmpty(): boolean {
+    return !this.userForm.get('password')?.value;
+  }
 }

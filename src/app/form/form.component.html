@@ -1,4 +1,6 @@
 <form action="" class="form" [formGroup]="userForm">
+  <span class="form__title">Registration</span>
+
   <div class="form__element">
     <label for="emailTitle">Login *</label>
 
@@ -29,5 +31,8 @@
     <form-sections [form]="userForm"></form-sections>
   </div>
 
-  <button type="submit" class="form__submit">Register</button>
+  <button
+    type="submit"
+    class="form__submit"
+    [disabled]="isEmailEmpty || isPasswordEmpty ? true : null">Register</button>
 </form>
