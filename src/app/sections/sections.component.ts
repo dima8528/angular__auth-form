@@ -12,7 +12,7 @@ import { analyzePassword } from "../../utils/analyzePassword";
 export class FormSections {
   @Input() form!: FormGroup;
 
-  firstSectionClasses(): object {
+  getSectionClass(section: 1 | 2 | 3): object {
     if (!this.form) {
       return {};
     }
@@ -26,49 +26,30 @@ export class FormSections {
     const isMedium = analyzePassword(passwordValue) === 'medium';
     const isStrong = analyzePassword(passwordValue) === 'strong';
 
-    return {
-      'is-red': isInvalid || (isValid && isEasy),
-      'is-yellow': isValid && isMedium,
-      'is-green': isValid && isStrong
-    };
-  }
+    switch (section) {
+      case 1:
+        return {
+          'is-red': isInvalid || (isValid && isEasy),
+          'is-yellow': isValid && isMedium,
+          'is-green': isValid && isStrong
+        };
 
-  secondSectionClasses(): any {
-    if (!this.form) {
-      return {};
+      case 2:
+        return {
+          'is-red': isInvalid,
+          'is-yellow': isValid && isMedium,
+          'is-green': isValid && isStrong
+        };
+
+      case 3:
+        return {
+          'is-red': isInvalid,
+          'is-green': isValid && isStrong
+        };
+
+      default:
+        return {}
     }
-
-    const passwordControl = this.form.get('password');
-    const passwordValue = passwordControl?.value;
-
-    const isInvalid = passwordControl?.invalid && (passwordControl.dirty || passwordControl.touched);
-    const isValid = passwordControl?.valid && !passwordControl.pristine;
-    const isMedium = analyzePassword(passwordValue) === 'medium';
-    const isStrong = analyzePassword(passwordValue) === 'strong';
-
-    return {
-      'is-red': isInvalid,
-      'is-yellow': isValid && isMedium,
-      'is-green': isValid && isStrong
-    };
-  }
-
-  thirdSectionClasses(): any {
-    if (!this.form) {
-      return {};
-    }
-
-    const passwordControl = this.form.get('password');
-    const passwordValue = passwordControl?.value;
-
-    const isInvalid = passwordControl?.invalid && (passwordControl.dirty || passwordControl.touched);
-    const isValid = passwordControl?.valid && !passwordControl.pristine;
-    const isStrong = analyzePassword(passwordValue) === 'strong';
-
-    return {
-      'is-red': isInvalid,
-      'is-green': isValid && isStrong
-    };
   }
 }
 
