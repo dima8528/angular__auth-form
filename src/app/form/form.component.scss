@@ -49,7 +49,7 @@
     font-weight: 700;
     border: 2px solid transparent;
     border-radius: 8px;
-    background-color: rgb(255, 124, 124);
+    background-color: red;
     color: white;
     cursor: pointer;
   }
@@ -75,5 +75,6 @@ input.ng-untouched {
 }
 
 button[disabled] {
+  background-color: rgb(255, 124, 124);
   cursor: not-allowed;
 }

@@ -27,8 +27,10 @@ export class AppForm {
     return !this.userForm.get('email')?.value;
   }
 
-  get isPasswordEmpty(): boolean {
-    return !this.userForm.get('password')?.value;
+  get isPasswordInvalid(): boolean {
+    const value = this.userForm.get('password')?.value;
+
+    return !value || value?.length < 8;
   }
 
   get passwordType(): string {
