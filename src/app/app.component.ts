@@ -10,6 +10,4 @@ import { FormModule } from './form/form.module';
   styleUrl: './app.component.scss'
 })
 
-export class AppComponent {
-  title = 'password-form';
-}
+export class AppComponent {}
