@@ -1,6 +1,6 @@
 # Angular Auth Form by Dmytro Haidash
 
-> Here you can find [the REPO](https://github.com/dima8528/angular__auth-form) and [the DEMO](https://dima8528.github.io/angular__auth-form/) of the project.
+Here you can find the [REPO](https://github.com/dima8528/angular__auth-form) and the [DEMO](https://dima8528.github.io/angular__auth-form/) of the project.
 
 # PasswordForm
 
