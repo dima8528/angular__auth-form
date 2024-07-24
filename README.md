@@ -2,8 +2,6 @@
 
 Here you can find the [REPO](https://github.com/dima8528/angular__auth-form) and the [DEMO](https://dima8528.github.io/angular__auth-form/) of the project.
 
-# PasswordForm
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
 
 ## Development server
